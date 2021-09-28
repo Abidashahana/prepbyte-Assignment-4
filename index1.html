@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="./index-1.css" />
+    <script
+      src="https://kit.fontawesome.com/348cc65b0f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="index-1.js"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+      <!-- main-conatinor -->
+    <div class="page" id='page'>
+      <div class="content">
+        <div class="header">
+          <div class="header-title">
+            Task <span class="header-sub-title">Lists</span>
+          </div>
+          <div class="header-add">
+            <i class="fas fa-plus-circle header-add-icon" onclick="loadPopup()"></i>
+            <span class="header-add-text">Add Item</spanheader-add-icon>
+          </div>
+        </div>        
+        <div id="message" class="message--active">No items in the todo list</div>
+        <div class="cards" id='cards'>
+        </div>
+        </div>
+      </div>
+
+     <!-- pop-up-1 -->
+      <div class="popup-container" id='popup'>
+        <div class="popup">
+          <div class="title">Add New List</div>
+          <div class="name-container">
+              <input type="text" class="name" id='listName' placeholder="Add new list"></input>
+          </div>
+          <div class="button-container">
+              <button class="add-button" onclick="addTaskList(document.getElementById('listName').value)">Add</button>
+              <button class="close-button" onclick="closePopup()">Close</button>
+          </div>
+        </div>
+    </div>
+    
+<!-- popup-2 -->
+    <div class="popup-container" id='todoPopup'>
+      <div class="popup">
+        <div class="title">Add New Item</div>
+        <div class="name-container">
+            <input type="text" class="name" id='todoName' placeholder="Add new item"></input>
+        </div>
+        <div class="add-button-container">
+            <button class="add-button" id="addTodoButton" >Add</button>
+            <button class="close-button" onclick="closeTodoPopup()">Close</button>
+        </div>
+            
+      </div>
+    </div>
+
+  </body>
+</html>

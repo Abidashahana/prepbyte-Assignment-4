@@ -1,0 +1,331 @@
+body{
+    /* margin-top:8%; */
+    background-color: black;
+  }
+  .page{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Roboto', sans-serif;
+      margin-top: 5%;
+      margin-bottom: 10%;
+      margin-left: 3%;
+      margin-right: 3%;
+   
+    }
+  
+  .content {
+    min-height: 100vh;
+    min-width: 70%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 1.5em;
+  }
+  
+  .header-title {
+    font-size: 3em;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color:white;
+  }
+  
+  .header-sub-title {
+    font-size: 1em;
+    font-weight: 200px;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .header-add {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color:white;
+    font-weight: 600;
+    padding-right: 1em;
+  }
+  
+  .header-add-icon {
+    color: #222fe2;
+    margin-right: 0.5em;
+    font-size: 2rem;
+  }
+  
+  .header-add-icon,
+  .card-add,
+  .card-delete :hover {
+    cursor: pointer;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .card {
+    border: 0.0625em solid #e25822;
+    border-radius: 0.4em;
+    width: 15em;
+    height: 23em;
+    box-shadow: 0.3125em 0.3125em 0.3125em rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin: 1em;
+    position: relative;
+    background-color: white;
+  }
+  
+  .card-link {
+    text-decoration: none;
+  }
+  
+  .card-title {
+    margin-top: 1.5em;
+    font-weight: 600;
+    font-size: large;
+    color: #e25822;
+    text-align: center;
+  }
+  
+  .card-todo-item--complete {
+    color: #e25822;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.2em;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .card-todo-item--complete > button {
+    display: none;
+  }
+  
+  .card-todo-item {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .card-todo-button {
+    font-size: 0.8em;
+    height: 1.5em;
+    width: auto;
+    background-color: #4b8ce8;
+  }
+  
+  button {
+    width: 5em;
+    height: 2em;
+    border-radius: 1.1em;
+    opacity: 1;
+    border: none;
+    font-size: 1em;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0.7em;
+    cursor: pointer;
+  }
+  
+  .card-todo-status-checkbox {
+    margin-right: 0.5em;
+  }
+  
+  .card-add {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1em;
+    color: #1e90ff;
+  }
+  
+  .card-delete {
+    position: absolute;
+    bottom: 0;
+    right: 3em;
+    margin: 1em;
+    color: red;
+  }
+  
+  .popup-container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  
+  .popup {
+    border: 0.0625em solid #e25822;
+    border-radius: 0.6em;
+    min-width: 26em;
+    filter: blur(0em);
+    background-color: white;
+  }
+  
+  .title {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    margin-top: 1em;
+    margin-bottom: .5em;
+  }
+  
+  .name {
+    padding: 0.5em;
+    border-radius: 0.1875em;
+    font-size: 0.875em;
+    margin: 1em;
+    border: 0.0625em solid #e25822;
+    min-width: 75%;
+    text-align: center;
+    width: 5px;
+  }
+  
+  .name:focus {
+    outline: none;
+    border: 0.0625em solid #e25822;
+  }
+  
+  .add-button,
+  .close-button {
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    
+    height: 2em;
+    border-radius: 2.5em;
+    color: white;
+    background-color: #e25822;
+    font-size: larger;
+    margin: 0.5em;
+  }
+  
+  .message--active {
+    display: flex;
+    visibility: visible;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    font-weight: 100;
+    color:white;
+  }
+  
+  .card-todo-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .message--inactive {
+    visibility: hidden;
+  }
+  
+  @media only screen and (max-device-width: 480px) {
+    .page {
+      margin-top: 5%;
+      margin-bottom: 10%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  
+    .header {
+      margin-bottom: 5em;
+    }
+  
+    .header-title {
+      font-size: 7em;
+      margin-right: 1em;
+      text-align: left;
+    }
+  
+    .header-add-text,
+    .card-status--complete,
+    .card-todo-status--pending,
+    .card-add,
+    .card-delete,
+    hr {
+      display: none;
+    }
+  
+    .header-add {
+      padding: 0;
+    }
+  
+    .header-add-icon {
+      font-size: 3em;
+      margin: 0;
+    }
+  
+    .cards {
+      flex-direction: column;
+    }
+  
+    .card {
+      display: flex;
+      width: 90%;
+      height: 12em;
+      border: 0.0625em solid #e25822;
+      border-radius: 1.4em;
+      box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.15);
+      text-align: left;
+      margin: 2em;
+    }
+  
+    .card-details {
+      width: 90%;
+    }
+  
+    .card-title {
+      font-size: 3.5em;
+      margin-left: 1em;
+      margin-top: 1em;
+      color: #836953;
+      text-align: center;
+    }
+  
+    .popup {
+      border: 0.0625em solid #e25822;
+      border-radius: 0.6em;
+      min-width: 80%;
+      min-height: 30%;
+      filter: blur(0em);
+      background-color: white;
+      border-radius: 1.4em;
+      box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.15);
+    }
+  
+    .title {
+      color: #e25822;
+      font-size: 3em;
+      margin: 1em;
+    }
+  
+    .name {
+      font-size: 3em;
+    }
+  
+    .add-button {
+      font-size: 3em;
+    }
+  
+    .card-todo-list {
+      display: none;
+    }
+  }
